@@ -11,7 +11,13 @@ mkdir -p "$DEST"
 ditto -x -k "$TMP/sobok-mac.zip" "$TMP/out"
 APP="$(ls -d "$TMP/out"/*.app | head -1)"
 NAME="$(basename "$APP")"
-if [ -d "$DEST/$NAME" ]; then rm -rf "$DEST/$NAME"; fi
+# App name: Korean on a Korean Mac, "Sobok" everywhere else (so it can be typed in Spotlight). SOBOK_LANG=ko|en overrides.
+UILANG="${SOBOK_LANG:-$(defaults read -g AppleLanguages 2>/dev/null | sed -n '2p' | tr -d ' ",')}"
+case "$UILANG" in ko*) ;; *) NAME="Sobok.app" ;; esac
+# Remove any earlier copy, whichever name it was installed under.
+for OLD in "$DEST"/*.app; do
+  if [ -x "$OLD/Contents/MacOS/sobok" ]; then rm -rf "$OLD"; fi
+done
 mv "$APP" "$DEST/$NAME"
 xattr -dr com.apple.quarantine "$DEST/$NAME" 2>/dev/null || true
 open "$DEST/$NAME"

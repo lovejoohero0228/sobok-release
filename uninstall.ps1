@@ -7,7 +7,8 @@ $targets = @(
   (Join-Path $env:LOCALAPPDATA 'Sobok'),
   (Join-Path $env:LOCALAPPDATA 'com.sobok.widget'),
   (Join-Path $env:APPDATA 'com.sobok.widget'),
-  (Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\$name.lnk")
+  (Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\$name.lnk"),
+  (Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Sobok.lnk')
 )
 foreach ($t in $targets) { if (Test-Path -LiteralPath $t) { Remove-Item -LiteralPath $t -Recurse -Force -ErrorAction SilentlyContinue } }
-Write-Host "$name was removed." -ForegroundColor Green
+Write-Host 'Sobok was removed.' -ForegroundColor Green
