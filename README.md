@@ -9,4 +9,6 @@
 
 Windows 10 · 11 과 Mac 에서 쓸 수 있어요.
 
+소스 코드는 [sobok](https://github.com/lovejoohero0228/sobok) 저장소에 있어요. 마음에 드셨다면 거기에 별 ⭐ 하나 눌러 주세요.
+
 <sub>말풍선 글꼴: HSHwalgongGulim (토끼네활자공장)</sub>
