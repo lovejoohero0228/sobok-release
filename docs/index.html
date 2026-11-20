@@ -4,7 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>소복소복 — 화면 속으로 겨울이 찾아왔어요</title>
-<meta name="description" content="바탕화면에 눈이 소복소복 쌓여요. 눈을 뭉쳐 굴리고, 말 거는 눈사람도 만들 수 있는 겨울 데스크탑 위젯.">
+<meta name="description" content="내 화면에 눈이 소복소복 쌓여요. 눈을 뭉쳐 굴리고, 말 거는 눈사람도 만들 수 있는 겨울 데스크탑 위젯.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="소복소복">
+<meta property="og:title" content="소복소복 — 화면 속으로 겨울이 찾아왔어요">
+<meta property="og:description" content="내 화면에 눈이 소복소복 쌓여요. 눈을 뭉쳐 굴리고, 말 거는 눈사람도 만들 수 있는 겨울 데스크탑 위젯.">
+<meta property="og:url" content="https://lovejoohero0228.github.io/sobok-release/">
+<meta property="og:image" content="https://lovejoohero0228.github.io/sobok-release/hero.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1044">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lovejoohero0228.github.io/sobok-release/hero.jpg">
 <style>
   :root {
     --bg: #f3f7fc; --card: #ffffff; --ink: #26334d; --soft: #5d6c8a; --line: #dbe4f1;
@@ -98,6 +109,8 @@
   #removeBox > summary:hover { color: var(--accent); }
   footer { text-align: center; font-size: 13px; color: var(--soft); padding: 28px 16px 40px; border-top: 1px solid var(--line); }
   footer a { color: inherit; }
+  footer .logs { font-size: 12px; margin-top: 12px; line-height: 1.8; opacity: .85; }
+  footer .logs code { font-size: 11.5px; word-break: break-all; }
   footer .star { font-size: 15px; color: var(--ink); margin-bottom: 10px; }
   footer .star a { color: var(--accent); font-weight: 700; }
   @media (max-width: 640px) { .clips, .clips.three { grid-template-columns: 1fr; } section { padding: 42px 0 46px; } .setlist li b { flex-basis: 92px; } }
@@ -274,7 +287,10 @@
 
 <footer>
   <p class="star">마음에 드셨다면 <a href="https://github.com/lovejoohero0228/sobok">GitHub 에서 별 ⭐</a> 하나 눌러 주세요. 눈사람이 좋아해요.</p>
-  소복소복 · <a href="https://github.com/lovejoohero0228/sobok">소스 코드</a>
+  소복소복 · <a href="https://github.com/lovejoohero0228/sobok">소스 코드</a> · <a href="https://github.com/lovejoohero0228/sobok/issues/new">문제가 있나요?</a>
+  <p class="logs">문제를 알려 주실 때 기록 파일을 함께 보내 주시면 원인을 빨리 찾을 수 있어요.<br>
+  Windows <code>%APPDATA%\com.sobok.widget\sobok.log</code><br>
+  Mac <code>~/Library/Application Support/com.sobok.widget/sobok.log</code></p>
 </footer>
 
 <script>
